@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behavioral hypothesis",
+  "type": "object",
+  "required": [
+    "id",
+    "rom_id",
+    "status",
+    "description",
+    "conditions",
+    "evidence_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "rom_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "observed",
+        "reproduced",
+        "validated",
+        "rejected"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_symbol_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
