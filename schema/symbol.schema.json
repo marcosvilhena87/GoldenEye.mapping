@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Memory symbol",
+  "type": "object",
+  "required": [
+    "id",
+    "rom_id",
+    "status",
+    "domain",
+    "width_bits",
+    "endianness",
+    "resolution",
+    "valid_when",
+    "evidence_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rom_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "observed",
+        "reproduced",
+        "validated",
+        "rejected"
+      ]
+    },
+    "domain": {
+      "enum": [
+        "RDRAM",
+        "ROM",
+        "other"
+      ]
+    },
+    "width_bits": {
+      "enum": [
+        8,
+        16,
+        32,
+        64
+      ]
+    },
+    "endianness": {
+      "enum": [
+        "big",
+        "little",
+        "not_applicable"
+      ]
+    },
+    "resolution": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "absolute",
+            "pointer_chain",
+            "unknown"
+          ]
+        },
+        "address": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]+$"
+        },
+        "base": {
+          "type": "string"
+        },
+        "offsets": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "valid_when": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
