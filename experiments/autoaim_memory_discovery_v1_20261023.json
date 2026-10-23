@@ -1,0 +1,163 @@
+{
+  "id": "autoaim-memory-discovery-v1-20261023",
+  "kind": "unconfirmed-rom-specific-memory-experiment",
+  "status": "observed_comparison_only",
+  "session": "20261023T043912Z_38579",
+  "rom": {
+    "title": "GoldenEye 007 (Nintendo 64)",
+    "sha256": null,
+    "rom_id": null,
+    "revision": null,
+    "core": null,
+    "identity_verified": false
+  },
+  "emulator": {
+    "name": "BizHawk",
+    "version": "2.11.1",
+    "memory_domain": "RDRAM",
+    "size_bytes": 8388608,
+    "access": "memory.read_u8(offset, 'RDRAM')",
+    "read_only": true,
+    "domain_access_note": "Direct getmemorydomainsize('RDRAM') returned 8388608 although getmemorydomainlist() did not include RDRAM in this run; Hex Editor showed an independent 0x200000 address count, discrepancy not resolved."
+  },
+  "captures": [
+    {
+      "label": "A1",
+      "operator_declared_setting": "enabled",
+      "frame": 41691,
+      "artifact": "output/archive/autoaim_mem_v1_20261023T043912Z_38579_A1.bin",
+      "sha256": "E69552A8579195ADFE99579CC50CB99AF31983795A54AD1F87CD38730BC09E57"
+    },
+    {
+      "label": "B",
+      "operator_declared_setting": "disabled",
+      "frame": 51170,
+      "artifact": "output/archive/autoaim_mem_v1_20261023T043912Z_38579_B.bin",
+      "sha256": null
+    },
+    {
+      "label": "A2",
+      "operator_declared_setting": "enabled",
+      "frame": 57426,
+      "artifact": "output/archive/autoaim_mem_v1_20261023T043912Z_38579_A2.bin",
+      "sha256": null
+    }
+  ],
+  "analysis": {
+    "domain_bytes": 8388608,
+    "a1_b_changed_bytes": 323702,
+    "exact_a1_equals_a2_differs_b": 23287,
+    "expression": "byte(A1) == byte(A2) && byte(A1) != byte(B)",
+    "fraction_reversible_of_changed": 0.07193962348085585,
+    "analyzer": "tools/analyze_autoaim_mem_v1.py",
+    "result_artifact": "output/csv/autoaim_mem_v1_candidates_20261023T043912Z_38579.csv",
+    "example_rows": [
+      {
+        "offset_hex": "0x0232A7",
+        "a1_byte": 68,
+        "b_byte": 112,
+        "a2_byte": 68,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x0232AB",
+        "a1_byte": 112,
+        "b_byte": 68,
+        "a2_byte": 112,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x0232C3",
+        "a1_byte": 0,
+        "b_byte": 1,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x027FE1",
+        "a1_byte": 31,
+        "b_byte": 9,
+        "a2_byte": 31,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x028011",
+        "a1_byte": 9,
+        "b_byte": 31,
+        "a2_byte": 9,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x0409BD",
+        "a1_byte": 0,
+        "b_byte": 153,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x0409BE",
+        "a1_byte": 0,
+        "b_byte": 153,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x0409BF",
+        "a1_byte": 0,
+        "b_byte": 154,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x040A93",
+        "a1_byte": 1,
+        "b_byte": 0,
+        "a2_byte": 1,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x040B40",
+        "a1_byte": 0,
+        "b_byte": 255,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x040B41",
+        "a1_byte": 0,
+        "b_byte": 255,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x04838B",
+        "a1_byte": 1,
+        "b_byte": 0,
+        "a2_byte": 1,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x05D6DF",
+        "a1_byte": 0,
+        "b_byte": 1,
+        "a2_byte": 0,
+        "status": "candidate_reversible_byte_only"
+      },
+      {
+        "offset_hex": "0x05D6E7",
+        "a1_byte": 8,
+        "b_byte": 0,
+        "a2_byte": 8,
+        "status": "candidate_reversible_byte_only"
+      }
+    ]
+  },
+  "limitations": [
+    "Only one RDRAM A/B/A session was compared; independent cross-session reproduction has not been completed.",
+    "These are offsets in the emulator's selected memory domain, not validated CPU virtual or physical addresses.",
+    "The auto-aim option states were declared by the operator, not derived from a verified game-memory flag.",
+    "The full candidate CSV and 24 MiB raw snapshots remain on the operator's local computer; they are not uploaded to GitHub.",
+    "No address is to be promoted into catalog/symbols.json until ROM identity, width, endianness, isolation controls and reproducibility have been verified.",
+    "Opening/closing menu and elapsed gameplay time can change many unrelated bytes."
+  ]
+}
