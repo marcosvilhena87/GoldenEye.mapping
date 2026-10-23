@@ -1,0 +1,120 @@
+{
+  "id": "autoaim-semantic-consolidation-v1-6-20261023",
+  "status": "experimentally_reproduced",
+  "operational_permission": "none",
+  "rom_identity_verified": false,
+  "rom_sha256": null,
+  "emulator": {
+    "name": "BizHawk",
+    "version": "2.11.1",
+    "domain": "RDRAM",
+    "size_bytes": 8388608,
+    "core_verified": false
+  },
+  "symbol_catalog_policy": "do_not_promote_to_catalog_symbols_until_rom_core_and_semantics_verified",
+  "candidate_offsets": [
+    {
+      "offset_hex": "0x040A93",
+      "status": "experimentally_reproduced",
+      "observation": "1 ON / 0 OFF in three controlled cycles; earliest or simultaneous transition, not proven primary"
+    },
+    {
+      "offset_hex": "0x0D308B",
+      "status": "experimentally_reproduced",
+      "observation": "1 ON / 0 OFF in three controlled cycles; simultaneous or one frame after 0x040A93"
+    },
+    {
+      "offset_hex": "0x0D309B",
+      "status": "experimentally_reproduced",
+      "observation": "1 ON / 0 OFF in three controlled cycles; simultaneous with 0x0D308B in observed interventions"
+    },
+    {
+      "offset_hex": "0x067D37",
+      "status": "needs_validation",
+      "observation": "dynamic 0..63 ramps in prior session; semantics unresolved"
+    },
+    {
+      "offset_hex": "0x069AAD",
+      "status": "needs_validation",
+      "observation": "nonbinary variable, semantics unresolved"
+    }
+  ],
+  "evidence_sessions": [
+    {
+      "session": "20261023T202111Z_127610",
+      "protocol": "v1.3",
+      "meaning": "independent run A"
+    },
+    {
+      "session": "20261023T202823Z_7959",
+      "protocol": "v1.3",
+      "meaning": "independent run B"
+    },
+    {
+      "session": "20261023T213220Z_234487",
+      "protocol": "v1.5",
+      "meaning": "3 controlled ON-OFF-ON cycles; six bracketed transitions per offset set",
+      "frames": [
+        {
+          "action": "OFF",
+          "lead": 239984,
+          "followers": 239985
+        },
+        {
+          "action": "ON",
+          "lead": 244759,
+          "followers": 244759
+        },
+        {
+          "action": "OFF",
+          "lead": 254123,
+          "followers": 254124
+        },
+        {
+          "action": "ON",
+          "lead": 259385,
+          "followers": 259386
+        },
+        {
+          "action": "OFF",
+          "lead": 265001,
+          "followers": 265001
+        },
+        {
+          "action": "ON",
+          "lead": 268207,
+          "followers": 268207
+        }
+      ]
+    },
+    {
+      "session": "20261023T215226Z_301601",
+      "protocol": "v1.5",
+      "meaning": "negative controls MENU_ONLY 302018-303383; OTHER_OPTION 303734-305156, zero transitions in three principal candidate offsets; STOP frame 307521"
+    }
+  ],
+  "summary": {
+    "controlled_interventions": 6,
+    "negative_controls": 2,
+    "principal_offset_transitions_in_controls": 0,
+    "lag_frames_observed": [
+      0,
+      1
+    ],
+    "negative_control_scope": "two specific operator-declared actions; not universal specificity"
+  },
+  "limitations": [
+    "Operator-declared Auto-Aim state, not independently verified by game internals",
+    "ROM SHA-256 and N64 core identity not established",
+    "Cannot distinguish primary configuration from mirror/derived state",
+    "RDRAM domain offsets not CPU addresses",
+    "No write tests performed; writes not authorized",
+    "No verified horizontal aim correction or Bond heading"
+  ],
+  "local_only_artifacts": [
+    "output/csv/autoaim_mem_v1_5_20261023T213220Z_234487_events.csv",
+    "output/csv/autoaim_mem_v1_5_20261023T213220Z_234487_markers.csv",
+    "output/csv/autoaim_mem_v1_5_20261023T215226Z_301601_events.csv",
+    "output/csv/autoaim_mem_v1_5_20261023T215226Z_301601_markers.csv"
+  ]
+}
