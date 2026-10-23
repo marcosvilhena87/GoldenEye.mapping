@@ -43,3 +43,7 @@ O experimento [Auto-Aim Memory Discovery v1](experiments/autoaim_memory_discover
 ## Auto-Aim horizontal e Auto-Align (planejamento)
 
 O [protocolo Horizontal Correction / Bond Heading v1](docs/AUTOAIM_HORIZONTAL_AUTOALIGN_V1.md) documenta as hipóteses, os controles experimentais e os critérios para validar a correção horizontal da arma e a orientação de Bond. **Nenhum símbolo novo foi validado**, e a aplicação Auto-Align permanece desabilitada.
+
+## Auto-Aim v1.6 — Consolidação semântica (evidências)
+
+[Registro experimental v1.6](experiments/autoaim_semantic_consolidation_v1_6_20261023.json): três offsets reproduziram seis intervenções ON/OFF e permaneceram estáveis em dois controles negativos. Outros dois offsets permanecem inconclusivos. Identidade de ROM/núcleo e função semântica não comprovadas; **não há novos símbolos em `catalog/symbols.json` nem permissão de escrita ou controle**.
