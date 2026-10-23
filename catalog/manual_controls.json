@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "profile": "default",
+  "game": "GoldenEye 007 (Nintendo 64)",
+  "scope": "manual_controls",
+  "rom_id": null,
+  "rom_identity_status": "not_hash_verified",
+  "emulator": "BizHawk 2.11.1 / NLua",
+  "source": "joypad.getimmediate",
+  "status": "operator_confirmed",
+  "qualification": "Este perfil default é o observado no teste, não garantia de equivalência com todos os esquemas de controle do jogo.",
+  "evidence": {
+    "session": "20261023T020648Z",
+    "frames": {
+      "start": 41098,
+      "end": 47121
+    },
+    "origin_repository": "https://github.com/marcosvilhena87/GoldenEye.assistant",
+    "raw_artifacts": [
+      "manual_controls_v2_events.csv",
+      "manual_controls_v2_annotations.csv",
+      "manual_controls_v2_diagnostics.csv",
+      "manual_controls_v2_commands.txt"
+    ],
+    "operator_confirmation": "Confirmação explícita do operador nesta conversa: Z atira; R ativa mira visual; A alterna entre armas/desarmado; B recarrega quando há munição extra.",
+    "raw_event_counts": {
+      "Z": 2,
+      "R": 1,
+      "A": 2,
+      "B": 1
+    },
+    "limitations": [
+      "Os CSVs demonstram PRESS/RELEASE; não comprovam automaticamente o efeito no jogo.",
+      "O arquivo de comandos aplicou o rótulo aim_manual a R, A e B; os rótulos experimentais não substituem a confirmação posterior do operador.",
+      "SHA-256 da ROM e nome exato do esquema interno de controle não foram estabelecidos."
+    ]
+  },
+  "mappings": [
+    {
+      "button": "Z",
+      "action_id": "fire_manual",
+      "description": "Atirar",
+      "conditions": "Arma ou ação compatível equipada",
+      "validation": "operator_confirmed"
+    },
+    {
+      "button": "R",
+      "action_id": "visual_aim",
+      "description": "Ativar mira visual",
+      "conditions": "Enquanto o controle estiver acionado, sujeito ao modo de controle",
+      "validation": "operator_confirmed"
+    },
+    {
+      "button": "A",
+      "action_id": "cycle_weapon",
+      "description": "Alternar entre armas e desarmado",
+      "conditions": "Conforme arsenal e configuração em jogo",
+      "validation": "operator_confirmed"
+    },
+    {
+      "button": "B",
+      "action_id": "reload",
+      "description": "Recarregar arma",
+      "conditions": "Há munição extra disponível e a arma permite recarga",
+      "validation": "operator_confirmed"
+    }
+  ]
+}
