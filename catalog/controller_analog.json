@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "scope": "emulator_input_not_game_memory",
+  "profile": "default",
+  "status": "partially_observed",
+  "source_api": "BizHawk NLua joypad.getimmediate(port=1)",
+  "emulator": "BizHawk 2.11.1",
+  "rom_relation": "not_required_for_input_coordinates",
+  "rom_identity_note": "A ROM usada na captura nao teve hash comprovado; nao atribuir esta evidencia a um simbolo ROM/RDRAM.",
+  "session": "20261023T031912Z_297508",
+  "fields": {
+    "x": "X Axis",
+    "y": "Y Axis"
+  },
+  "observations": [
+    {
+      "phase": "neutral",
+      "frame": 297508,
+      "x": 0,
+      "y": 0,
+      "state": "observed"
+    },
+    {
+      "phase": "up",
+      "frame": 305476,
+      "x": 0,
+      "y": 127,
+      "state": "observed"
+    },
+    {
+      "phase": "down",
+      "frame": 311250,
+      "x": 0,
+      "y": -127,
+      "state": "observed"
+    },
+    {
+      "phase": "left",
+      "frame": 312151,
+      "x": -127,
+      "y": 0,
+      "state": "observed"
+    },
+    {
+      "phase": "right",
+      "frame": 313182,
+      "x": 127,
+      "y": 0,
+      "state": "observed"
+    },
+    {
+      "phase": "up",
+      "frame": 305518,
+      "x": -90,
+      "y": 89,
+      "state": "observed_unlabeled_diagonal"
+    },
+    {
+      "phase": "up",
+      "frame": 305569,
+      "x": 90,
+      "y": 90,
+      "state": "observed_unlabeled_diagonal"
+    }
+  ],
+  "pending": [
+    "up_left phase-labeled repetition",
+    "up_right phase-labeled repetition",
+    "down_left",
+    "down_right",
+    "intermediate axis ranges",
+    "deadzone",
+    "in-game motion mapping"
+  ],
+  "provenance": {
+    "origin": "Console and analog_v1_samples.csv lines transcribed by operator in ChatGPT conversation, 2026-10-23",
+    "repository": "https://github.com/marcosvilhena87/GoldenEye.assistant",
+    "artifact": "output/csv/analog_v1_samples.csv",
+    "qualifications": [
+      "Values are raw BizHawk controller input, not RAM values or offsets.",
+      "Diagonals were captured during phase up; labels inferred from signs, not phase-confirmed.",
+      "Observed extrema do not prove hard bounds or circular constraint."
+    ]
+  }
+}
