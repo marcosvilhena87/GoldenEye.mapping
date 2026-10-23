@@ -33,3 +33,15 @@ python .\tools\send_analog_v1.py PHASE neutral_end
 ```
 
 **These five commands are a checklist, not a single copy-paste batch**: physically perform and release each movement before sending the next phase. Export the complete `output/csv/analog_v1_samples.csv`, along with diagnostics, then record values with frame and phase; until then, negative-Y diagonals remain unknown.
+
+## Diagonal phase capture completed (same session)
+
+| Phase | Frame | X Axis | Y Axis | Status |
+|---|---:|---:|---:|---|
+| up_left | 324161 | -90 | 89 | observed in matching phase |
+| up_right | 325145 | 90 | 90 | observed in matching phase |
+| down_left | 326357 | -90 | -90 | observed in matching phase |
+| down_right | 327606 | 89 | -90 | observed in matching phase |
+| neutral_end | 328539 | 0 | 0 | observed phase snapshot |
+
+All four diagonals were reported from `analog_v1_samples.csv` for session `20261023T031912Z_297508` via BizHawk `joypad.getimmediate`. These are **controller API output values**, not `RDRAM` addresses or memory symbols. Replication, deadzone, intermediate levels and in-game motion effects remain untested.
