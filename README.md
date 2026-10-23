@@ -39,3 +39,7 @@ Consulte [docs/methodology.md](docs/methodology.md) antes de adicionar valores.
 ## Auto-aim: observação da RDRAM (23/10/2026)
 
 O experimento [Auto-Aim Memory Discovery v1](experiments/autoaim_memory_discovery_v1_20261023.json) documenta **323.702** bytes alterados entre A1 (ligado) e B (desligado), dos quais **23.287** retornaram ao valor de A1 em A2 (religado), em uma sessão de 8 MiB de `RDRAM`. Os offsets listados são **candidatos reversíveis, não endereços identificados de auto-aim**. A ROM/núcleo desta sessão ainda não possuem identidade comprovada; por isso o resultado fica em `experiments/` e `catalog/symbols.json` permanece vazio. CSV integral e dumps ficam locais no `GoldenEye.assistant/output/` do operador.
+
+## Auto-Aim horizontal e Auto-Align (planejamento)
+
+O [protocolo Horizontal Correction / Bond Heading v1](docs/AUTOAIM_HORIZONTAL_AUTOALIGN_V1.md) documenta as hipóteses, os controles experimentais e os critérios para validar a correção horizontal da arma e a orientação de Bond. **Nenhum símbolo novo foi validado**, e a aplicação Auto-Align permanece desabilitada.
