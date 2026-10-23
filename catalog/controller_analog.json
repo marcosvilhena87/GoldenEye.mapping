@@ -2,7 +2,7 @@
   "schema_version": 1,
   "scope": "emulator_input_not_game_memory",
   "profile": "default",
-  "status": "partially_observed",
+  "status": "eight_directions_observed_single_session",
   "source_api": "BizHawk NLua joypad.getimmediate(port=1)",
   "emulator": "BizHawk 2.11.1",
   "rom_relation": "not_required_for_input_coordinates",
@@ -61,13 +61,45 @@
       "x": 90,
       "y": 90,
       "state": "observed_unlabeled_diagonal"
+    },
+    {
+      "phase": "up_left",
+      "frame": 324161,
+      "x": -90,
+      "y": 89,
+      "state": "phase_confirmed_observed"
+    },
+    {
+      "phase": "up_right",
+      "frame": 325145,
+      "x": 90,
+      "y": 90,
+      "state": "phase_confirmed_observed"
+    },
+    {
+      "phase": "down_left",
+      "frame": 326357,
+      "x": -90,
+      "y": -90,
+      "state": "phase_confirmed_observed"
+    },
+    {
+      "phase": "down_right",
+      "frame": 327606,
+      "x": 89,
+      "y": -90,
+      "state": "phase_confirmed_observed"
+    },
+    {
+      "phase": "neutral_end",
+      "frame": 328539,
+      "x": 0,
+      "y": 0,
+      "state": "phase_snapshot_observed"
     }
   ],
   "pending": [
-    "up_left phase-labeled repetition",
-    "up_right phase-labeled repetition",
-    "down_left",
-    "down_right",
+    "independent_session_repetition",
     "intermediate axis ranges",
     "deadzone",
     "in-game motion mapping"
@@ -79,7 +111,8 @@
     "qualifications": [
       "Values are raw BizHawk controller input, not RAM values or offsets.",
       "Diagonals were captured during phase up; labels inferred from signs, not phase-confirmed.",
-      "Observed extrema do not prove hard bounds or circular constraint."
+      "Observed extrema do not prove hard bounds or circular constraint.",
+      "Four diagonals have now been observed during their correspondingly labeled phases; phase labeling alone does not prove hard limits or ROM memory behaviors."
     ]
   }
 }
