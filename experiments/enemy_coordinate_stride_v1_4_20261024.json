@@ -1,0 +1,31 @@
+{
+  "id": "enemy-coordinate-stride-v1-4-20261024",
+  "status": "implemented_pending_experiment",
+  "session": "20261024T210536Z_648577",
+  "source_v1_3": {
+    "dynamic_stable": 6175,
+    "mirrored": 5345,
+    "distinct": 830
+  },
+  "hypotheses_hex": [
+    "0x40",
+    "0x48",
+    "0x50",
+    "0x60",
+    "0x80"
+  ],
+  "controls_hex": [
+    "0x44",
+    "0x4C",
+    "0x54",
+    "0x64",
+    "0x84"
+  ],
+  "method": "Compare per-byte stable dynamic flag co-occurrence at candidate strides in both regions with no preferential 0x50 weighting.",
+  "caveats": [
+    "Only two ON epochs",
+    "No enemy instance/position identity",
+    "No validated XYZ",
+    "Independence enrichment not statistical significance"
+  ]
+}
