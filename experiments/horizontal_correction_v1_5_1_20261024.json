@@ -1,0 +1,89 @@
+{
+  "id": "horizontal-correction-v1-5-1-20261024",
+  "status": "observed_and_reproduced_temporal_association",
+  "provenance": "operator_provided_console_results",
+  "environment": {
+    "emulator": "BizHawk 2.11.1",
+    "memory_domain": "RDRAM",
+    "rom_sha256_verified": false,
+    "n64_core_verified": false
+  },
+  "sessions": [
+    {
+      "id": "20261024T001228Z_22717",
+      "termination": "frame_limit",
+      "ticks": 36000,
+      "calibration_audit_rows": 24,
+      "windows": [
+        {
+          "action": "FIXED_NO_TARGET",
+          "start_sample": 1572,
+          "end_sample": 3346,
+          "total_events": 0
+        },
+        {
+          "action": "FIXED_AIM_LEFT",
+          "start_sample": 12941,
+          "end_sample": 14114,
+          "events_a": 382,
+          "events_b": 382,
+          "simultaneous_pairs": 382,
+          "delta_be_float32": "-2 within tolerance"
+        },
+        {
+          "action": "FIXED_AIM_RIGHT",
+          "start_sample": 34600,
+          "end_sample": 35512,
+          "events_a": 302,
+          "events_b": 302,
+          "simultaneous_pairs": 302,
+          "delta_be_float32": "-2 within tolerance"
+        }
+      ]
+    },
+    {
+      "id": "20261024T002422Z_65389",
+      "termination": "stop",
+      "ticks": 8020,
+      "calibration_audit_rows": 16,
+      "windows": [
+        {
+          "action": "TURN_LEFT_NO_TARGET",
+          "start_sample": 2445,
+          "end_sample": 3193,
+          "events_a": 73,
+          "events_b": 73,
+          "simultaneous_pairs": 73,
+          "delta_min": -2.00000011920929,
+          "delta_max": -1.99999809265137
+        },
+        {
+          "action": "TURN_RIGHT_NO_TARGET",
+          "start_sample": 3988,
+          "end_sample": 4792,
+          "events_a": 76,
+          "events_b": 76,
+          "simultaneous_pairs": 76,
+          "delta_min": -2.00000005688344,
+          "delta_max": -1.99999994039536
+        }
+      ]
+    }
+  ],
+  "candidate_pair": [
+    "0x0D3998",
+    "0x0D3D40"
+  ],
+  "total_simultaneous_pairs": 833,
+  "limitations": [
+    "Four operator-declared interventions; not independent proof of weapon-only movement",
+    "Float32 big-endian is a tested hypothesis, not validated type or angular scale",
+    "Pair also changes during manual Bond rotation without eligible target",
+    "No ROM/core identity verified for experiment; RDRAM offsets only",
+    "No memory writes or operational permission"
+  ],
+  "source_artifacts_local": [
+    "GoldenEye.assistant/output/csv/horizontal_v1_5_1_20261024T001228Z_22717_calibration_audit.csv",
+    "GoldenEye.assistant/output/csv/horizontal_v1_5_1_20261024T002422Z_65389_calibration_audit.csv"
+  ]
+}
