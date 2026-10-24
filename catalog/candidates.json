@@ -178,5 +178,17 @@
     "core_verified": false,
     "evidence_path": "experiments/dual_u8_0d36f4_0d3720_intake_20261024.json",
     "operational_permission": "read_only"
+  },
+  {
+    "id": "freeze-enemy-switch-02c90c",
+    "domain": "RDRAM",
+    "offset_hex": "0x02C90C",
+    "width_bits": 8,
+    "status": "candidate",
+    "hypothesis": "Byte observado 0 quando Freeze All Enemies Alive desativado; valor ON e mecanismo ainda nao confirmados. Controle de estado, nao coordenadas.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/freeze_enemy_switch_02c90c_20261024.json",
+    "operational_permission": "read_only"
   }
 ]
