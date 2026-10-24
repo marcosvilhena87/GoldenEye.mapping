@@ -1,0 +1,16 @@
+{
+  "id": "enemy-coordinate-full-ram-v1-8-20261024",
+  "status": "implemented_pending_capture_and_tests",
+  "protocol": "Full 8MiB ON stable+hold P1/P2/P3; camera-only CAM; read-only KSEG0 System Bus",
+  "files": [
+    "GoldenEye.assistant/enemy_coordinate_full_ram_capture_v1_8.lua",
+    "GoldenEye.assistant/tools/send_enemy_freeze_v1_8.py",
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1_8.py"
+  ],
+  "search": "Aligned float32 big/little endian with temporal stability, camera and graphics flags, nearby 4/8 byte trios",
+  "limitations": [
+    "No confirmed XYZ",
+    "No known enemy movement measurements",
+    "No ROM/core and address equivalence validation"
+  ]
+}
