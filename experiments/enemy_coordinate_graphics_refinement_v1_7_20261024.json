@@ -1,0 +1,25 @@
+{
+  "id": "enemy-coordinate-graphics-refinement-v1-7-20261024",
+  "status": "implemented_pending_local_execution",
+  "source_session": "20261024T230404Z_651462",
+  "observed_v1_6": {
+    "temporal_candidates": 3687,
+    "screened_candidates": 365
+  },
+  "graphics_evidence": [
+    "E7000000",
+    "F8000000",
+    "FB000000",
+    "FC159804",
+    "B900031D",
+    "BC000C06"
+  ],
+  "method": "Multiple opcode-pattern windows in captured memory mark graphical context without hard elimination; finite float32 BE/LE temporal candidates checked for camera and hold stability.",
+  "scope": "Three previously captured regions only",
+  "limitations": [
+    "No validated display list identification",
+    "No entire RAM scan",
+    "No enemy identity or XYZ motion calibration",
+    "No ROM/core or KSEG0 physical equivalence validated"
+  ]
+}
