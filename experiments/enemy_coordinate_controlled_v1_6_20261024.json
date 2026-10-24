@@ -1,0 +1,32 @@
+{
+  "id": "enemy-coordinate-controlled-v1-6-20261024",
+  "status": "implemented_pending_operator_validation",
+  "protocol": "ON P1 stable+hold; OFF enemy motion; ON P2 stable+hold; OFF second motion; ON P3 stable+hold; camera-only turn with ON3, CAM snapshot.",
+  "region_hypotheses": [
+    [
+      "0x0D5000",
+      13568
+    ],
+    [
+      "0x0E6800",
+      13568
+    ],
+    [
+      "0x0D3800",
+      2304
+    ]
+  ],
+  "read_only": true,
+  "notes": [
+    "No enemy XYZ addresses validated",
+    "KSEG0 translation for full region unverified",
+    "ROM/core identity not yet captured",
+    "No automatic target identity or direction measurement"
+  ],
+  "files": [
+    "GoldenEye.assistant/enemy_coordinate_controlled_capture_v1_6.lua",
+    "GoldenEye.assistant/tools/send_enemy_freeze_v1_6.py",
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1_6.py",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_CONTROLLED_V1_6.md"
+  ]
+}
