@@ -1,0 +1,30 @@
+{
+  "id": "freeze_enemy_switch_02c90c_operator_20261024",
+  "rom_id": "unverified",
+  "environment": {
+    "emulator": "BizHawk 2.11.1 (reported)",
+    "domain": "RDRAM (Cheat Search reported)",
+    "rom_sha256": null,
+    "core": null
+  },
+  "procedure": [
+    "Observe enemy moving with Freeze OFF",
+    "Enable historical GameShark 8002C90C 00FF after enemy leaves field of view",
+    "Observe enemy remains where stopped",
+    "Disable Freeze; observe enemy resumes walking from stopped location",
+    "Observe Cheat Search row 02C90C d u 0 RDRAM; operator identifies 0 as Desligado"
+  ],
+  "observations": [
+    "OFF: enemy moves and leaves field of view",
+    "ON: enemy remains frozen at location reached; no reset to start",
+    "OFF again: resumes from frozen point",
+    "0x02C90C RDRAM u8 value 0 is reported OFF; ON value not yet measured or logged"
+  ],
+  "artifacts": [],
+  "limitations": [
+    "Cheat Search observation not a synchronized frame capture",
+    "Unknown precise ON byte, transitions and core/ROM identity",
+    "0x02C90C is state-control hypothesis, not coordinates",
+    "Need verify whether cheat persists writes and if RDRAM alias remains stable"
+  ]
+}
