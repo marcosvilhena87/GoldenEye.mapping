@@ -1,0 +1,40 @@
+{
+  "id": "dual-u8-0d36f4-0d3720-intake-20261024",
+  "status": "candidate_unobserved",
+  "provenance": "user_supplied_cheat_search_rows",
+  "reported_entries": [
+    {
+      "offset_hex": "0x0D36F4",
+      "type_display": "d",
+      "signedness_display": "u",
+      "width_display": "1",
+      "domain": "RDRAM",
+      "value_not_provided": true
+    },
+    {
+      "offset_hex": "0x0D3720",
+      "type_display": "d",
+      "signedness_display": "u",
+      "width_display": "1",
+      "domain": "RDRAM",
+      "value_not_provided": true
+    }
+  ],
+  "hypothesis": "Unknown u8 fields to test independently for motion, rotation, target visibility, autoaim toggling and weapon changes; no semantic assignment",
+  "environment": {
+    "rom_sha256_verified": false,
+    "n64_core_verified": false,
+    "domain_size_to_verify": 8388608
+  },
+  "observations": [],
+  "sessions": [],
+  "artifacts": [],
+  "operational_permission": "read_only",
+  "limitations": [
+    "Offset display does not establish data semantics",
+    "No raw observed values supplied",
+    "No linkage established to nearby 0x0D3998/0x0D3D40 or 0x0D308B/0x0D309B",
+    "ROM/core not verified",
+    "No canonical symbol"
+  ]
+}
