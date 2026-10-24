@@ -1,0 +1,32 @@
+{
+  "id": "enemy-coordinate-field-layout-v1-5-20261024",
+  "status": "implemented_pending_execution",
+  "session": "20261024T210536Z_648577",
+  "strides_hex": [
+    "0x40",
+    "0x48",
+    "0x50"
+  ],
+  "control_strides_hex": [
+    "0x44",
+    "0x4C",
+    "0x54"
+  ],
+  "field_widths_bytes": [
+    2,
+    4,
+    8
+  ],
+  "method": "Same aligned word values P1/P2 and stable dynamic pairs across hypothesized strides, measured in two regions independently",
+  "limitations": [
+    "No entity identity or spatial ground truth",
+    "No record structure verified",
+    "ROM/core and bus mapping unverified"
+  ],
+  "source_v1_4": {
+    "ranking_first": "0x50",
+    "min_enrichment": 1.69333,
+    "runner_up": "0x40",
+    "runner_up_enrichment": 1.69006
+  }
+}
