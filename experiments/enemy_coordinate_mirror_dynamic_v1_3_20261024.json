@@ -1,0 +1,19 @@
+{
+  "id": "enemy-coordinate-mirror-dynamic-v1-3-20261024",
+  "status": "implemented_pending_local_execution",
+  "source_session": "20261024T210536Z_648577",
+  "observed_v1_2": {
+    "shift_hex": "0x11800",
+    "window_bytes": 13568,
+    "p1_equal": 10409,
+    "p2_equal": 10700,
+    "both_equal": 10143
+  },
+  "scope": "Raw zero/constant accounting, snapshot stability, mirrored vs distinct dynamic bytes and contiguous dynamic runs",
+  "artifacts": [
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1_3.py",
+    "GoldenEye.assistant/tests/test_enemy_freeze_v1_3.py",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_MIRROR_DYNAMIC_V1_3.md"
+  ],
+  "validation": "No enemy XYZ validation; mapping remains candidate only"
+}
