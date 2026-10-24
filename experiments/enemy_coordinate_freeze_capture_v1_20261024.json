@@ -1,0 +1,31 @@
+{
+  "id": "enemy-coordinate-freeze-capture-v1-20261024",
+  "status": "planned_experiment",
+  "rom_verified": false,
+  "core_verified": false,
+  "prior_evidence": {
+    "source": "operator supplied analysis report",
+    "frames": 9006,
+    "freeze_off_frames": 4878,
+    "freeze_on_frames": 4128,
+    "transition_first_observed": [
+      738457,
+      741272,
+      743177
+    ],
+    "alias_mismatches": 0
+  },
+  "hypothesis": "Freeze-synchronized same-epoch stability plus between-epoch variation might isolate position candidates for individual enemies.",
+  "constraints": [
+    "System Bus KSEG0 full region not yet proven to mirror entire RDRAM",
+    "No confirmed enemy coordinates",
+    "No captured v1 snapshots yet"
+  ],
+  "procedure": "Read-only 8 MiB snapshots after 30 stable frames and again at 120 ON frames, separated by OFF enemy motion; compare float32 representations as candidate-only.",
+  "artifacts": [
+    "GoldenEye.assistant/enemy_coordinate_freeze_capture_v1.lua",
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1.py",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_FREEZE_CAPTURE_V1.md"
+  ],
+  "promotion": "None; do not add symbol until physical ground truth and ROM/core identity verified"
+}
