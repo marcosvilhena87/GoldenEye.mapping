@@ -1,0 +1,48 @@
+{
+  "id": "freeze-address-mapping-v1-20261024",
+  "title": "Freeze All Enemies Alive state byte reported in RAM Watch",
+  "status": "observed",
+  "date": "2026-10-24",
+  "environment": {
+    "emulator": "BizHawk 2.11.1",
+    "core": "unverified",
+    "rom_id": "unverified",
+    "rom_sha256": null
+  },
+  "procedure": "Operator toggled Freeze All Enemies Alive and watched 0x02C90C in RAM Watch domain RDRAM as decimal unsigned; independently tried same numeric offset via Lua System Bus.",
+  "observations": [
+    {
+      "domain_label": "RDRAM (RAM Watch)",
+      "offset_hex": "0x02C90C",
+      "width_bits": 8,
+      "freeze_off": 0,
+      "freeze_on": 255,
+      "source": "operator report"
+    },
+    {
+      "domain_label": "System Bus (Lua)",
+      "address_hex": "0x0002C90C",
+      "value_off": 255,
+      "observation": "mismatch with RAM Watch when OFF",
+      "source": "operator report"
+    },
+    {
+      "behavior": "Enemy freezes in place on activation and resumes movement from that position on deactivation",
+      "source": "operator report"
+    }
+  ],
+  "hypotheses": [
+    "System Bus physical-offset read does not necessarily map to RAM Watch RDRAM byte",
+    "Check alternative N64 virtual KSEG aliases with read-only probe"
+  ],
+  "limitations": [
+    "No verified ROM/core mapping",
+    "No raw captures supplied",
+    "No causal or coordinate semantics established"
+  ],
+  "artifacts": [
+    "GoldenEye.assistant/freeze_address_mapping_v1.lua",
+    "GoldenEye.assistant/docs/FREEZE_ADDRESS_MAPPING_V1.md"
+  ],
+  "policy": "read_only_candidate_not_validated"
+}
