@@ -1,0 +1,68 @@
+{
+  "id": "freeze-address-transition-synchronization-v1-1-20261024",
+  "status": "observed",
+  "source": "operator-provided v1 phase/transition results; v1.1 implementation has not been executed on user's emulator",
+  "rom_verified": false,
+  "core_verified": false,
+  "experimental_observations": {
+    "markers": [
+      [
+        "OFF1",
+        696092
+      ],
+      [
+        "ON1",
+        698573
+      ],
+      [
+        "OFF2",
+        699545
+      ],
+      [
+        "ON2",
+        701383
+      ],
+      [
+        "STOP",
+        703442
+      ]
+    ],
+    "kseg0_and_kseg1_transitions": [
+      {
+        "frame": 698198,
+        "from": 0,
+        "to": 255
+      },
+      {
+        "frame": 700108,
+        "from": 255,
+        "to": 0
+      },
+      {
+        "frame": 702077,
+        "from": 0,
+        "to": 255
+      }
+    ],
+    "physical_same_offset": "0x0002C90C remained 255 across phase samples",
+    "ram_watch": {
+      "domain_display": "RDRAM",
+      "offset": "0x02C90C",
+      "freeze_off": 0,
+      "freeze_on": 255
+    }
+  },
+  "procedure": "Run read-only Lua monitor of kseg0/kseg1 address hypotheses and direct physical control; require 30 consecutive matching samples to confirm transition; compare offline against independent RAM Watch.",
+  "artifacts": [
+    "GoldenEye.assistant/freeze_address_mapping_v1_1.lua",
+    "GoldenEye.assistant/tools/analyze_freeze_address_v1_1.py",
+    "GoldenEye.assistant/docs/FREEZE_ADDRESS_MAPPING_V1_1.md"
+  ],
+  "limitations": [
+    "No v1.1 empirical captures yet",
+    "Aliases not validated across restart, core or ROM",
+    "Frames are first observed reads, not causal cheat latency",
+    "No enemy XYZ identification"
+  ],
+  "promotion_policy": "Candidate-only observation; do not promote to validated symbol"
+}
