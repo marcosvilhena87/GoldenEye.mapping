@@ -13,12 +13,14 @@ Catálogo canônico, versionado e auditável de endereços, estruturas e comport
 
 ## Organização
 - `catalog/roms.json`: variantes identificadas por hashes; inicialmente vazio.
-- `catalog/symbols.json`: endereços, ponteiros e estruturas; inicialmente vazio.
+- `catalog/symbols.json`: símbolos canônicos (não confundir com candidatos); permanece vazio até validação.
+- `catalog/candidates.json`: candidatos e observações experimentais com proveniência e restrição somente leitura.
 - `catalog/behaviors.json`: hipóteses e comportamentos observados; inicialmente vazio.
 - `schema/`: contratos JSON Schema.
 - `docs/`: metodologia e compatibilidade.
 - `experiments/`: protocolo experimental.
 - `scripts/validate_catalog.py`: validação estrutural e cruzada sem dependências externas.
+- `scripts/validate_candidates.py`: validação independente do catálogo experimental.
 - `tests/`: testes automatizados.
   
 ## Primeiro experimento
@@ -31,6 +33,7 @@ Catálogo canônico, versionado e auditável de endereços, estruturas e comport
 ## Validar
 ```sh
 python scripts/validate_catalog.py
+python scripts/validate_candidates.py
 python -m unittest discover -s tests -v
 ```
 
@@ -47,3 +50,9 @@ O [protocolo Horizontal Correction / Bond Heading v1](docs/AUTOAIM_HORIZONTAL_AU
 ## Auto-Aim v1.6 — Consolidação semântica (evidências)
 
 [Registro experimental v1.6](experiments/autoaim_semantic_consolidation_v1_6_20261023.json): três offsets reproduziram seis intervenções ON/OFF e permaneceram estáveis em dois controles negativos. Outros dois offsets permanecem inconclusivos. Identidade de ROM/núcleo e função semântica não comprovadas; **não há novos símbolos em `catalog/symbols.json` nem permissão de escrita ou controle**.
+
+## Recebimento permanente: candidatos e endereços validados (24/10/2026)
+
+O repositório recebe **ambos**, separadamente: `catalog/candidates.json` preserva offsets experimentais mesmo quando a identidade de ROM/núcleo da sessão não foi comprovada; `catalog/symbols.json` contém símbolos sujeitos ao contrato canônico, com status e evidência vinculada. O status `reproduced` de um candidato **não** valida sua função. **Nenhum candidato concede escrita ou automação.** Processo e critérios de promoção: [docs/CANDIDATE_INTAKE.md](docs/CANDIDATE_INTAKE.md).
+
+A [auditoria horizontal v1.5.1](experiments/horizontal_correction_v1_5_1_20261024.json) preserva as duas sessões e a correlação observada nos offsets `0x0D3998` e `0x0D3D40` (833 pares sincronizados, interpretação float32 BE hipotética, diferença próxima de -2). Os campos também variam quando Bond gira sem alvo: **não constituem headings validados**.
