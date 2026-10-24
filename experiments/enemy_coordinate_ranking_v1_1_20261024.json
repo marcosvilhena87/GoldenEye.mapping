@@ -1,0 +1,24 @@
+{
+  "id": "enemy-coordinate-ranking-v1-1-20261024",
+  "status": "planned_analysis",
+  "basis": {
+    "session": "20261024T210536Z_648577",
+    "candidates_reported": 2853,
+    "on_epochs": [
+      2,
+      4
+    ],
+    "note": "candidate count from operator-provided output, no source binaries available in this environment"
+  },
+  "method": "Rank all stable float32 interpretations, offset proximity clusters and neighbor pairs; candidate only",
+  "files": [
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1_1.py",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_RANKING_V1_1.md"
+  ],
+  "limits": [
+    "No XYZ validated",
+    "No independent target identity",
+    "No full RDRAM alias proof",
+    "Only two ON epochs currently present"
+  ]
+}
