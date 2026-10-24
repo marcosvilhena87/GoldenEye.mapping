@@ -1,0 +1,25 @@
+{
+  "id": "enemy-coordinate-repeated-structure-v1-2-20261024",
+  "status": "analysis_implemented_not_executed",
+  "session": "20261024T210536Z_648577",
+  "operator_observations": {
+    "filtered_pairs": 716,
+    "both_equal": 572,
+    "p1_only": 75,
+    "p2_only": 44,
+    "neither": 25,
+    "shift_hex": "0x11800"
+  },
+  "method": "Compare raw bytes of fixed window with offset-shift controls across two ON epochs and paired HOLD snapshots.",
+  "artifacts": [
+    "GoldenEye.assistant/tools/analyze_enemy_freeze_v1_2.py",
+    "GoldenEye.assistant/tests/test_enemy_freeze_v1_2.py",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_REPEATED_STRUCTURE_V1_2.md"
+  ],
+  "limitations": [
+    "No local raw snapshot execution yet",
+    "No physical XYZ identified",
+    "No canonical symbol promotion",
+    "ROM/core and general KSEG0 mapping not confirmed"
+  ]
+}
