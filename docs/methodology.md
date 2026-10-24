@@ -25,3 +25,7 @@ Valores sensíveis a cena, tela ou arma devem documentar o escopo.
 
 ## Compatibilidade
 Não assumir equivalência entre ROM USA/PAL/JPN, revisões, hacks, versões de BizHawk ou núcleos N64. Unidades de endereço devem ser explícitas; separar endereço físico de deslocamento no domínio de leitura da API.
+
+## Receber candidatos sem promover símbolos
+
+Adote o fluxo separado em [CANDIDATE_INTAKE.md](CANDIDATE_INTAKE.md). Um candidato com sessão não identificada pode ser registrado em `catalog/candidates.json` com fonte verificável, ressalvas, largura da janela observada e permissão somente leitura. Nunca lhe atribua o SHA de uma ROM cadastrada sem verificação da sessão. Apenas evidência que ateste identidade, comportamento, semântica, representação, limites e controles pode fundamentar promoção a símbolo canônico validado. Execute `python scripts/validate_candidates.py` além do validador existente.
