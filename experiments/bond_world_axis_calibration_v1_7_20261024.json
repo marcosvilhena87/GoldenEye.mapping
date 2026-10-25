@@ -1,0 +1,66 @@
+{
+  "id": "bond-world-axis-calibration-v1-7-20261024",
+  "status": "implemented_awaiting_independent_fixed_world_measurements",
+  "basis": "experiments/bond_coordinate_system_v1_6_20261024.json",
+  "candidate_components": [
+    "0x0D33EC",
+    "0x0D33F4"
+  ],
+  "prior_observations": [
+    {
+      "component": "EC",
+      "delta": 128,
+      "heading_deg": 0,
+      "motion": "left",
+      "session": "20261025T021929Z_971338"
+    },
+    {
+      "component": "EC",
+      "delta": 128,
+      "heading_deg": 90,
+      "motion": "backward",
+      "session": "20261025T024811Z_941631"
+    },
+    {
+      "component": "EC",
+      "delta": 128,
+      "heading_deg": 180,
+      "motion": "right",
+      "session": "20261025T023038Z_953512"
+    },
+    {
+      "component": "F4",
+      "delta": -128,
+      "heading_deg": 0,
+      "motion": "backward",
+      "session": "20261025T023714Z_940197"
+    },
+    {
+      "component": "F4",
+      "delta": -128,
+      "heading_deg": 90,
+      "motion": "right",
+      "session": "20261025T025126Z_942158"
+    },
+    {
+      "component": "F4",
+      "delta": -128,
+      "heading_deg": 180,
+      "motion": "forward",
+      "session": "20261025T024117Z_941298"
+    }
+  ],
+  "provenance": "captured memory deltas with operator-reported screen/scene-relative directions; heading not independently calibrated",
+  "tool": "GoldenEye.assistant/tools/calibrate_bond_world_axes_v1_7.py",
+  "protocol": "GoldenEye.assistant/docs/BOND_WORLD_AXIS_CALIBRATION_V1_7.md",
+  "manifest": "GoldenEye.assistant/docs/BOND_WORLD_AXIS_V1_7_MANIFEST.json",
+  "required_next_evidence": [
+    "independently measured fixed-world displacement before and after each edit",
+    "same-world-position heading-controlled savestates",
+    "independent yaw calibration",
+    "collision/camera exclusion",
+    "replication across sessions"
+  ],
+  "world_axis_identity": "unresolved",
+  "canonical_symbol_promoted": false
+}
