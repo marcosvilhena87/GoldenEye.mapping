@@ -1,6 +1,6 @@
 {
   "id": "bond-position-reversibility-v1-4-20261024",
-  "status": "protocol_ready_pending_tests",
+  "status": "experimental_bidirectional_physical_effect_operator_confirmed",
   "previous_observation": {
     "session": "20261025T005336Z_673276",
     "frame": 676296,
@@ -25,5 +25,82 @@
     "independent session and ROM/core verification"
   ],
   "validated_coordinate": false,
-  "operational_permission": "read_only"
+  "operational_permission": "read_only",
+  "completed_trials": [
+    {
+      "session": "20261025T005336Z_673276",
+      "frame": 676296,
+      "address": "0x0D33EC",
+      "before_hex": "469857EF",
+      "after_hex": "469757EF",
+      "delta_float32_be": -128,
+      "operator_observation": "forward_on_screen",
+      "marker_relative_samples": [
+        0,
+        1,
+        30,
+        120
+      ],
+      "post_marker_raw": "469757EF",
+      "kseg_alias_mismatches": 0,
+      "qualification": "memory transition observed; operator confirmed forward motion; actual manual input time not independently verified"
+    },
+    {
+      "session": "20261025T010430Z_708294",
+      "frame": 711007,
+      "address": "0x0D33EC",
+      "before_hex": "469757EF",
+      "after_hex": "469657EF",
+      "delta_float32_be": -128,
+      "operator_observation": "forward_on_screen",
+      "marker_relative_samples": [
+        0,
+        1,
+        30,
+        120
+      ],
+      "post_marker_raw": "469657EF",
+      "frames_captured": 3764,
+      "kseg_alias_mismatches": 0,
+      "stop": true,
+      "qualification": "operator confirmed forward motion; marker-relative persistence samples do not by themselves prove continuous hold"
+    },
+    {
+      "session": "20261025T010745Z_719164",
+      "frame": 721230,
+      "address": "0x0D33EC",
+      "before_hex": "469657EF",
+      "after_hex": "469757EF",
+      "delta_float32_be": 128,
+      "operator_observation": "backward_on_screen",
+      "marker_relative_samples": [
+        0,
+        1,
+        30,
+        120
+      ],
+      "post_marker_raw": "469757EF",
+      "frames_captured": 3023,
+      "kseg_alias_mismatches": 0,
+      "stop": true,
+      "qualification": "operator confirmed backward motion; reverse move restores prior raw word; no independently documented identical savestate"
+    }
+  ],
+  "experimental_conclusions": {
+    "observed": "Two negative 128 float32-BE changes were accompanied by forward visual displacement, and one positive 128 change by backward displacement, as reported by operator.",
+    "classification": "spatial_candidate_bidirectional_physical_effect_reproduced_operator_report",
+    "coordinate_axis": "unknown",
+    "float32_big_endian": "strongly_supported_hypothesis",
+    "causal_confidence": "intervention-correlated, operator-confirmed, not externally instrumented",
+    "global_or_dynamic_address": "unknown",
+    "canonical_symbol_promoted": false
+  },
+  "outstanding_validation": [
+    "isolated F4 write and reverse control",
+    "replication from identical savestate and fixed heading",
+    "ROM version and N64 core verification",
+    "world-axis geometry calibration and camera controls",
+    "cross-session address stability",
+    "full change-frame-relative 1/30/120 persistence audit"
+  ]
 }
