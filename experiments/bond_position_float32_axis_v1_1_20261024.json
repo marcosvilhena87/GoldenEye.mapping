@@ -1,0 +1,35 @@
+{
+  "id": "bond-position-float32-axis-v1-1-20261024",
+  "status": "hypothesis_pending_capture",
+  "source": "GoldenEye.assistant/docs/BOND_POSITION_DISCOVERY_V1_1.md",
+  "legacy_evidence": "experiments/bond_position_write_candidate_v1_20261024.json",
+  "addresses": [
+    "0x0D33E8",
+    "0x0D33EC",
+    "0x0D33F0",
+    "0x0D33F4"
+  ],
+  "interpretation": "IEEE754 float32 BE candidate at 0x0D33EC; 16-bit changes may affect exponent/significand",
+  "runtime": "BizHawk N64 System Bus KSEG0/KSEG1; not independently verified against Cheat Search",
+  "controls": [
+    "BASELINE",
+    "FORWARD",
+    "BACK",
+    "STRAFE_LEFT",
+    "STRAFE_RIGHT",
+    "ROTATE",
+    "WRITE_BEFORE",
+    "WRITE_AFTER",
+    "HOLD"
+  ],
+  "observations": [],
+  "sessions": [],
+  "operational_permission": "read_only",
+  "limitations": [
+    "No new v1.1 capture yet",
+    "No physical axis assignment",
+    "No autonomous memory writes",
+    "ROM/core not verified",
+    "KSEG equality does not validate coordinates"
+  ]
+}
