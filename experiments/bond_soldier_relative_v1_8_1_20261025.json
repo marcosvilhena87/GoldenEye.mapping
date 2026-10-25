@@ -23,5 +23,13 @@
   ],
   "enemy_xyz_validated": false,
   "independent_relative_vectors_available": 0,
-  "canonical_symbols_promoted": false
+  "canonical_symbols_promoted": false,
+  "integration": {
+    "assistant_status_doc": "GoldenEye.assistant/docs/BOND_SOLDIER_V1_8_1_STATUS.md",
+    "assistant_analyzer": "GoldenEye.assistant/tools/analyze_bond_soldier_relative_v1_8_1.py",
+    "assistant_tests": "GoldenEye.assistant/tests/test_bond_soldier_relative_v1_8_1.py",
+    "assistant_protocol": "GoldenEye.assistant/docs/BOND_SOLDIER_RELATIVE_DISCOVERY_V1_8_1.md",
+    "independent_runtime_tests_executed": false
+  },
+  "next_validation": "Collect freeze OFF/ON and independent enemy position control with stable identity; run offline audit; do not promote coordinates without independent geometry"
 }
