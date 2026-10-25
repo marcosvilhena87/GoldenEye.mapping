@@ -1,0 +1,29 @@
+{
+  "id": "bond-position-reversibility-v1-4-20261024",
+  "status": "protocol_ready_pending_tests",
+  "previous_observation": {
+    "session": "20261025T005336Z_673276",
+    "frame": 676296,
+    "target": "0x0D33EC",
+    "raw_before": "469857EF",
+    "raw_after": "469757EF",
+    "float32_be_delta": -128,
+    "operator_visual_report": "Bond moved forward on screen",
+    "qualification": "Operator-reported visual motion; memory change captured, manual write timing inferred"
+  },
+  "protocol": "GoldenEye.assistant/docs/BOND_POSITION_VALIDATION_V1_4.md",
+  "planned_trials": [
+    "EC decrement from baseline",
+    "EC increment from same baseline",
+    "F4 independent small write from same baseline"
+  ],
+  "evidence_required": [
+    "full four-byte before/after",
+    "real change frame",
+    "stability after actual change",
+    "visual landmark and camera observation",
+    "independent session and ROM/core verification"
+  ],
+  "validated_coordinate": false,
+  "operational_permission": "read_only"
+}
