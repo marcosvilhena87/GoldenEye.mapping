@@ -190,5 +190,17 @@
     "core_verified": false,
     "evidence_path": "experiments/freeze_enemy_switch_02c90c_20261024.json",
     "operational_permission": "read_only"
+  },
+  {
+    "id": "bond-position-write-0d33ec",
+    "domain": "RDRAM",
+    "offset_hex": "0x0D33EC",
+    "width_bits": 16,
+    "status": "candidate",
+    "hypothesis": "Operator reports that manually editing the unsigned word at this address changes Bond's physical position; coordinate axis, numerical format, persistence and source-vs-mirror role remain unverified.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/bond_position_write_candidate_v1_20261024.json",
+    "operational_permission": "read_only"
   }
 ]
