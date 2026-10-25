@@ -1,0 +1,47 @@
+{
+  "id": "bond-soldier-mission-part-context-20261025",
+  "status": "operator_reported_context",
+  "game": "GoldenEye 007 (Nintendo 64)",
+  "mission": {
+    "number": 1,
+    "name": "Arkangelsk"
+  },
+  "part": {
+    "roman": "I",
+    "name": "Dam"
+  },
+  "label_as_displayed": "Mission 1: Arkangelsk / Part I: Dam",
+  "basis": "Operator-provided screenshot of mission/part title (2026-10-25) and operator statement that the coordinate captures were recorded in this mission/part; per-session in-game mission flag not independently captured.",
+  "applies_to": "Bond/Soldier experimental coordinate candidate captures discussed in v1.8.2, v1.8.3 and v1.8.4",
+  "related_evidence": "experiments/bond_soldier_freeze_transition_v1_8_4_20261025.json",
+  "session_ids": [
+    "20261025T144903Z_62005",
+    "20261025T151226Z_143169",
+    "20261025T152121Z_173644",
+    "20261025T153208Z_211209",
+    "20261025T153459Z_9589"
+  ],
+  "candidate_offsets": [
+    "0x0D33EC",
+    "0x0D33F0",
+    "0x0D33F4",
+    "0x20F594",
+    "0x20F5AC"
+  ],
+  "freeze_indicator_candidate": "0x02C90C",
+  "spatial_scope": "local_to_reported_mission_part_context_only",
+  "cross_mission_generalization_validated": false,
+  "xyz_axis_assignment_validated": false,
+  "rom_core_verified": false,
+  "read_only": true,
+  "comparison_keys": [
+    "mission.number",
+    "mission.name",
+    "part.roman",
+    "part.name",
+    "session_ids",
+    "candidate_offsets",
+    "rom_core_verified"
+  ],
+  "future_comparison_note": "Capture in-game mission/part identity, ROM SHA-256, N64 core, stable soldier identity and controlled offsets for every new map; absolute offsets may represent reused/different objects across levels."
+}
