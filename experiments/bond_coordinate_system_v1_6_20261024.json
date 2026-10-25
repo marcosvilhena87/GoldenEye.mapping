@@ -1,0 +1,43 @@
+{
+  "id": "bond-coordinate-system-v1-6-20261024",
+  "status": "protocol_started_no_heading_comparison",
+  "known_candidates": {
+    "0x0D33EC": {
+      "classification": "experimental_bidirectional_physical_effect_operator_report",
+      "source": "experiments/bond_position_reversibility_v1_4_20261024.json"
+    },
+    "0x0D33F4": {
+      "classification": "experimental_bidirectional_physical_effect_with_ec_memory_independence_operator_report",
+      "source": "experiments/bond_position_second_axis_v1_5_20261024.json"
+    }
+  },
+  "hypotheses": [
+    "fixed_global_axes",
+    "bond_heading_relative_components",
+    "confounded_or_unresolved"
+  ],
+  "required_heading_matrix": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "minimum_initial_comparison": [
+    "EC same-signed delta at 0 and 180 degrees",
+    "F4 same-signed delta at 0 and 180 degrees"
+  ],
+  "measurement_requirements": [
+    "matched fixed-world landmarks",
+    "independently verified heading",
+    "isolated four-byte changes",
+    "other coordinate remains constant",
+    "camera motion and collision recorded",
+    "actual-change-relative 1/30/120 checkpoints"
+  ],
+  "protocol": "GoldenEye.assistant/docs/BOND_COORDINATE_SYSTEM_VALIDATION_V1_6.md",
+  "analyzer": "GoldenEye.assistant/tools/analyze_bond_coordinate_v1_6.py",
+  "run_template": "GoldenEye.assistant/docs/BOND_COORDINATE_V1_6_RUN_TEMPLATE.json",
+  "data_status": "awaiting_operator_runs",
+  "world_axis_identification": null,
+  "canonical_symbol_promoted": false
+}
