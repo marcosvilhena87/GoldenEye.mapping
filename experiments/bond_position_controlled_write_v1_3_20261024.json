@@ -1,0 +1,23 @@
+{
+  "id": "bond-position-controlled-write-v1-3-20261024",
+  "status": "protocol_implemented_awaiting_capture",
+  "basis": [
+    "experiments/bond_position_write_candidate_v1_20261024.json",
+    "experiments/bond_position_physical_axis_v1_2_20261024.json"
+  ],
+  "targets": [
+    "0x0D33EC",
+    "0x0D33F4"
+  ],
+  "representation": "float32 BE candidate; verify complete raw 32 bits for manual u16 writes",
+  "protocol": "GoldenEye.assistant/docs/BOND_POSITION_DISCOVERY_V1_3.md",
+  "safety": "Read-only capture; manual controlled reversible write only",
+  "observations": [],
+  "sessions": [],
+  "limitations": [
+    "No v1.3 run yet",
+    "Physical axis and write persistence not independently confirmed",
+    "ROM/core verification pending"
+  ],
+  "operational_permission": "read_only"
+}
