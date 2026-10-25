@@ -1,6 +1,6 @@
 {
   "id": "bond-position-second-axis-independence-v1-5-20261024",
-  "status": "protocol_ready_no_F4_results",
+  "status": "experimental_bidirectional_physical_effect_and_ec_memory_independence_operator_confirmed",
   "target": "0x0D33F4",
   "control": "0x0D33EC",
   "hypothesis": "F4 independently modulates another physical position component while EC remains stable",
@@ -19,12 +19,63 @@
   "promotion_prohibited_until_validation": true,
   "validated_coordinate": false,
   "global_axis_name": null,
-  "recorded_trials": [],
+  "recorded_trials": [
+    {
+      "session": "20261025T015634Z_893003",
+      "change_frame": 896418,
+      "before_hex": "468048E1",
+      "after_hex": "468148E1",
+      "delta_float32_be": 128,
+      "ec_constant_hex": "469545B8",
+      "ec_stable_through_change_plus_120": true,
+      "change_relative_checkpoints": {
+        "1": 896419,
+        "30": 896448,
+        "120": 896538
+      },
+      "post_change_hex": "468148E1",
+      "frames_captured": 4339,
+      "kseg_alias_mismatches": 0,
+      "isolated_f4_memory_change_with_stable_ec": true,
+      "operator_visual_direction": "left_on_screen",
+      "operator_camera_motion": "none_observed"
+    },
+    {
+      "session": "20261025T015941Z_903478",
+      "change_frame": 906214,
+      "before_hex": "468148E1",
+      "after_hex": "468048E1",
+      "delta_float32_be": -128,
+      "ec_constant_hex": "469545B8",
+      "ec_stable_through_change_plus_120": true,
+      "change_relative_checkpoints": {
+        "1": 906215,
+        "30": 906244,
+        "120": 906334
+      },
+      "post_change_hex": "468048E1",
+      "frames_captured": 3594,
+      "kseg_alias_mismatches": 0,
+      "isolated_f4_memory_change_with_stable_ec": true,
+      "operator_visual_direction": "right_on_screen",
+      "operator_camera_motion": "not_reported"
+    }
+  ],
   "open_questions": [
-    "F4 visual displacement direction",
-    "F4 reverse response",
-    "EC invariance",
-    "ROM/core stability",
-    "actual-change-relative persistence"
-  ]
+    "Global world-axis direction versus heading-dependent directions",
+    "Bond orientation and static world landmarks",
+    "Cross-session and ROM/core verification",
+    "camera behavior in reversal session",
+    "replication after 90/180-degree heading rotation"
+  ],
+  "experimental_conclusions": {
+    "classification": "spatial_candidate_bidirectional_physical_effect_and_ec_memory_independence_operator_report",
+    "observed": "F4 +128 left on-screen, F4 -128 right on-screen, while EC remained fixed in both intervention windows",
+    "memory_independence": "analyzer_flag_true_both_trials",
+    "physical_reversibility": "operator_confirmed",
+    "float32_big_endian": "strongly_supported_hypothesis",
+    "global_axis_identity": "unknown",
+    "reference_frame": "screen_relative_in_one_orientation_only",
+    "canonical_symbol_promoted": false
+  }
 }
