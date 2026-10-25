@@ -1,0 +1,129 @@
+{
+  "id": "bond-soldier-freeze-transition-v1-8-4-20261025",
+  "status": "experimentally_supported_not_semantically_validated",
+  "operational_permission": "read_only",
+  "rom_identity_verified": false,
+  "rom_sha256": null,
+  "core_verified": false,
+  "emulator": {
+    "name": "BizHawk",
+    "version": "2.11.1",
+    "memory_access": "System Bus KSEG0/KSEG1 aliases; experimental physical RDRAM offsets",
+    "core_id": null
+  },
+  "source_repository": "https://github.com/marcosvilhena87/GoldenEye.assistant",
+  "protocols": [
+    "v1.8.2",
+    "v1.8.3",
+    "v1.8.4"
+  ],
+  "candidate_offsets": [
+    {
+      "offset_hex": "0x02C90C",
+      "width_bits": 8,
+      "interpretation": "Candidate Freeze status byte; 00 observed in unfrozen motion and FF in frozen stability",
+      "semantic_validation": false
+    },
+    {
+      "offset_hex": "0x20F594",
+      "width_bits": 32,
+      "interpretation": "Four-byte candidate soldier field A; raw changes associated with observed motion; X/Z not established",
+      "semantic_validation": false
+    },
+    {
+      "offset_hex": "0x20F5AC",
+      "width_bits": 32,
+      "interpretation": "Four-byte candidate soldier field B; raw changes associated with observed motion; X/Z not established",
+      "semantic_validation": false
+    }
+  ],
+  "sessions": [
+    {
+      "sid": "20261025T144903Z_62005",
+      "protocol": "v1.8.2",
+      "frames": 9892,
+      "capture_complete": true,
+      "observation": "Camera rotation without Bond walking: Bond EC/F0/F4 changed 183/263/194 times while soldier candidate words stayed constant. Does not establish axes."
+    },
+    {
+      "sid": "20261025T151226Z_143169",
+      "protocol": "v1.8.3",
+      "frames": 5071,
+      "capture_complete": true,
+      "observation": "Soldier fields changed during SOLDIER_MOVING (466 and 463 events) and were stable in SOLDIER_REFROZEN (64 frames); SOLDIER_STILL contained 53/55 changes, so strict negative control failed."
+    },
+    {
+      "sid": "20261025T152121Z_173644",
+      "protocol": "v1.8.4",
+      "frames": 8216,
+      "capture_complete": false,
+      "termination_reason": "invalid_marker",
+      "freeze_indicator_transitions": [
+        {
+          "frame": 174868,
+          "from": "00",
+          "to": "FF"
+        },
+        {
+          "frame": 176952,
+          "from": "FF",
+          "to": "00"
+        }
+      ],
+      "observation": "Observed correlation between indicator transitions and changes/stability. Partial session; no timeline gaps, alias mismatches or incomplete frames reported."
+    },
+    {
+      "sid": "20261025T153208Z_211209",
+      "protocol": "v1.8.4",
+      "frames": 580,
+      "capture_complete": true,
+      "termination_reason": "stop",
+      "observation": "BASELINE/STOP command protocol smoke test; no soldier motion episodes."
+    },
+    {
+      "sid": "20261025T153459Z_9589",
+      "protocol": "v1.8.4",
+      "frames": 7801,
+      "capture_complete": true,
+      "termination_reason": "stop",
+      "freeze_indicator_transitions": [
+        {
+          "frame": 11549,
+          "from": "00",
+          "to": "FF",
+          "last_soldier_raw_change_frame": 11548
+        },
+        {
+          "frame": 13414,
+          "from": "FF",
+          "to": "00",
+          "first_soldier_raw_change_frame": 13415
+        },
+        {
+          "frame": 16704,
+          "from": "00",
+          "to": "FF",
+          "last_soldier_raw_change_frame": 16702
+        }
+      ],
+      "observation": "22 heuristic soldier-motion episodes; both fields stable in FREEZE_ON/SOLDIER_STILL/SOLDIER_REFROZEN; varying with Freeze OFF. Prestart Bond fields varied; no change reported for those fields in controlled movement phases."
+    }
+  ],
+  "supported_observations": [
+    "Indicator byte 0x02C90C changed between 00 and FF in temporal association with manually operated enemy Freeze in two capture sessions.",
+    "Both soldier candidate raw four-byte fields were stable during some Freeze phases and changed when the enemy was unfrozen.",
+    "The complete 7801-frame session independently reproduces relevant transitions after a previous incomplete capture."
+  ],
+  "explicitly_unvalidated": [
+    "Attribution of 0x20F594 or 0x20F5AC to physical X/Z (or Y) axes.",
+    "Absolute world position, units, scale, coordinate frame or soldier identity/structure lifetime.",
+    "Whether 0x02C90C is the primary cheat control rather than a mirror/derived state.",
+    "ROM SHA-256 and emulator N64 core identity for sessions.",
+    "Independent same-frame geometry, multiple-soldier replication and write safety."
+  ],
+  "promotion_policy": "Do not add symbols or enable writes/automation from these observations; promote only after ROM/core identity and semantic spatial validation.",
+  "local_only_artifacts": [
+    "output/csv/bond_soldier_v1_8_4_20261025T153459Z_9589_analysis.json",
+    "output/csv/bond_soldier_v1_8_4_20261025T152121Z_173644_analysis.json"
+  ]
+}
