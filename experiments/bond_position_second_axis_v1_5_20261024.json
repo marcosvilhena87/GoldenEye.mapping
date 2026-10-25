@@ -1,0 +1,30 @@
+{
+  "id": "bond-position-second-axis-independence-v1-5-20261024",
+  "status": "protocol_ready_no_F4_results",
+  "target": "0x0D33F4",
+  "control": "0x0D33EC",
+  "hypothesis": "F4 independently modulates another physical position component while EC remains stable",
+  "prior_ec_evidence": "experiments/bond_position_reversibility_v1_4_20261024.json",
+  "protocol": "GoldenEye.assistant/docs/BOND_POSITION_VALIDATION_V1_5.md",
+  "analysis_script": "GoldenEye.assistant/tools/analyze_bond_second_axis_v1_5.py",
+  "capture_script": "GoldenEye.assistant/bond_position_discovery_v1_3.lua",
+  "procedure": [
+    "Capture F4 intervention after WRITE_PRE marker, with EC unchanged",
+    "Require full 32-bit F4 raw before/after, verified Cheat Search address and width",
+    "Use independent same-savestate reverse-signed F4 trial",
+    "Corroborate visual geometry and static camera landmarks"
+  ],
+  "read_only_automation": true,
+  "operator_manual_RAM_write_only": true,
+  "promotion_prohibited_until_validation": true,
+  "validated_coordinate": false,
+  "global_axis_name": null,
+  "recorded_trials": [],
+  "open_questions": [
+    "F4 visual displacement direction",
+    "F4 reverse response",
+    "EC invariance",
+    "ROM/core stability",
+    "actual-change-relative persistence"
+  ]
+}
