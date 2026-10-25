@@ -1,0 +1,27 @@
+{
+  "id": "bond-position-write-0d33ec-v1-20261024",
+  "status": "operator_reported_not_independently_reproduced",
+  "provenance": "user_supplied_manual_cheat_search_intervention",
+  "reported_entry": {
+    "offset_hex": "0x0D33EC",
+    "type_display": "w",
+    "signedness_display": "u",
+    "display_count": 1,
+    "domain": "RDRAM"
+  },
+  "operator_observation": "Manually changing the value changed Bond's position",
+  "unknowns": [
+    "direction and magnitude",
+    "exact before and after values",
+    "persistence across frames",
+    "whether camera moved or followed",
+    "endianness and whole-field width",
+    "ROM/core and memory domain verification"
+  ],
+  "capture_code": "GoldenEye.assistant/bond_position_discovery_v1.lua",
+  "protocol": "GoldenEye.assistant/docs/BOND_POSITION_DISCOVERY_V1.md",
+  "operational_permission": "read_only",
+  "observations": [],
+  "sessions": [],
+  "artifacts": []
+}
