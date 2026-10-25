@@ -1,0 +1,28 @@
+{
+  "id": "bond-world-landmark-discovery-v1-8-20261024",
+  "status": "tool_implemented_no_independent_landmark_measurements",
+  "previous_result": {
+    "version": "v1.7",
+    "eligible_world_vectors": 0,
+    "observation_count": 6,
+    "assessment": "insufficient_or_inconsistent_independent_world_geometry"
+  },
+  "candidates": [
+    "0x0D33EC",
+    "0x0D33F4"
+  ],
+  "implementation": "GoldenEye.assistant/tools/discover_bond_world_landmarks_v1_8.py",
+  "survey_template": "GoldenEye.assistant/docs/BOND_LANDMARK_V1_8_SURVEY_TEMPLATE.json",
+  "protocol": "GoldenEye.assistant/docs/BOND_WORLD_LANDMARK_DISCOVERY_V1_8.md",
+  "method": "Least-squares affine registration of four or more surveyed static map landmarks, separately marked Bond positions before/after",
+  "required_independence": "Landmark world positions and Bond position marks must not be derived from candidate EC/F4 values or uncalibrated FPS directions",
+  "world_measurements_available": false,
+  "symbols_promoted": false,
+  "engine_axis_names_validated": false,
+  "remaining_blockers": [
+    "independent fixed overhead map or measured room geometry",
+    "independent Bond position marks before and after write",
+    "independently verified heading and pose",
+    "repeated world-frame displacement measurements with uncertainties"
+  ]
+}
