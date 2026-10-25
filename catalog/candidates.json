@@ -184,11 +184,11 @@
     "domain": "RDRAM",
     "offset_hex": "0x02C90C",
     "width_bits": 8,
-    "status": "candidate",
-    "hypothesis": "Byte observado 0 quando Freeze All Enemies Alive desativado; valor ON e mecanismo ainda nao confirmados. Controle de estado, nao coordenadas.",
+    "status": "reproduced",
+    "hypothesis": "Byte u8 experimental: 00 em fases sem Freeze e FF durante Freeze, com transicoes temporalmente correlacionadas a interrupcao/retomada de alteracoes nos campos candidatos do soldado em sessoes v1.8.4. Nao demonstrado como controle primario; pode ser espelho/estado derivado.",
     "session_rom_verified": false,
     "core_verified": false,
-    "evidence_path": "experiments/freeze_enemy_switch_02c90c_20261024.json",
+    "evidence_path": "experiments/bond_soldier_freeze_transition_v1_8_4_20261025.json",
     "operational_permission": "read_only"
   },
   {
@@ -201,6 +201,30 @@
     "session_rom_verified": false,
     "core_verified": false,
     "evidence_path": "experiments/bond_position_float32_axis_v1_1_20261024.json",
+    "operational_permission": "read_only"
+  },
+  {
+    "id": "soldier-motion-candidate-20f594",
+    "domain": "RDRAM",
+    "offset_hex": "0x20F594",
+    "width_bits": 32,
+    "status": "reproduced",
+    "hypothesis": "Janela RAW de 4 bytes do candidato Soldier #1 A; altera em fases de movimento e fica estavel durante Freeze nas sessoes observadas. Decodificacao float32 BE e natureza espacial nao comprovadas. Atribuicao a eixo X/Z (ou Y) explicitamente NAO VALIDADA.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/bond_soldier_freeze_transition_v1_8_4_20261025.json",
+    "operational_permission": "read_only"
+  },
+  {
+    "id": "soldier-motion-candidate-20f5ac",
+    "domain": "RDRAM",
+    "offset_hex": "0x20F5AC",
+    "width_bits": 32,
+    "status": "reproduced",
+    "hypothesis": "Janela RAW de 4 bytes do candidato Soldier #1 B; altera em fases de movimento e fica estavel durante Freeze nas sessoes observadas. Decodificacao float32 BE e natureza espacial nao comprovadas. Atribuicao a eixo X/Z (ou Y) explicitamente NAO VALIDADA.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/bond_soldier_freeze_transition_v1_8_4_20261025.json",
     "operational_permission": "read_only"
   }
 ]
