@@ -1,0 +1,31 @@
+{
+  "id": "soldier-bond-target-location-intake-20261025",
+  "status": "operator_observation_unvalidated",
+  "context": {
+    "mission": "Arkangelsk",
+    "part": "Dam",
+    "context_inherited_from_prior_tests": true,
+    "new_save_mission_part_independently_confirmed": false
+  },
+  "addresses": [
+    {
+      "offset_hex": "0x06D248",
+      "ram_watch_type": "w u",
+      "width_bits": 32
+    },
+    {
+      "offset_hex": "0x06D250",
+      "ram_watch_type": "w u",
+      "width_bits": 32
+    }
+  ],
+  "relationship": "Operator reports that these addresses relate to how a soldier locates Bond.",
+  "unknowns": [
+    "World coordinates versus AI target or last-known position",
+    "Byte order and numeric representation",
+    "Lifetime and pointer ownership",
+    "Generalization across save loads and mission/part"
+  ],
+  "negative_evidence": "Prior soldier candidate offsets 0x20F594 and 0x20F5AC failed in a new save; those candidates may be dynamic or context-bound, without a confirmed cause.",
+  "operational_permission": "read_only"
+}
