@@ -1,0 +1,14 @@
+{
+  "id": "bond-position-physical-axis-v1-2-20261024",
+  "status": "implemented_pending_experimental_capture",
+  "source": "GoldenEye.assistant/docs/BOND_POSITION_DISCOVERY_V1_2.md",
+  "candidate_offsets": [
+    "0x0D33EC",
+    "0x0D33F4"
+  ],
+  "measurement": "Read-only float32 BE and timed operator-marked movement/write observations",
+  "evidence_state": "No new v1.2 execution; do not infer validated axis or write persistence",
+  "sessions": [],
+  "observations": [],
+  "operational_permission": "read_only"
+}
