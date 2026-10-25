@@ -226,5 +226,29 @@
     "core_verified": false,
     "evidence_path": "experiments/bond_soldier_freeze_transition_v1_8_4_20261025.json",
     "operational_permission": "read_only"
+  },
+  {
+    "id": "soldier-bond-location-probe-06d248",
+    "domain": "RDRAM",
+    "offset_hex": "0x06D248",
+    "width_bits": 32,
+    "status": "candidate",
+    "hypothesis": "Operador observou associacao com a forma como soldado localiza Bond; RAM Watch w u (word unsigned). Sem captura de valores, funcao semantica, encoding, coordenadas ou persistencia entre saves validados.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/soldier_bond_target_location_intake_20261025.json",
+    "operational_permission": "read_only"
+  },
+  {
+    "id": "soldier-bond-location-probe-06d250",
+    "domain": "RDRAM",
+    "offset_hex": "0x06D250",
+    "width_bits": 32,
+    "status": "candidate",
+    "hypothesis": "Operador observou associacao com a forma como soldado localiza Bond; RAM Watch w u (word unsigned). Sem captura de valores, funcao semantica, encoding, coordenadas ou persistencia entre saves validados.",
+    "session_rom_verified": false,
+    "core_verified": false,
+    "evidence_path": "experiments/soldier_bond_target_location_intake_20261025.json",
+    "operational_permission": "read_only"
   }
 ]
