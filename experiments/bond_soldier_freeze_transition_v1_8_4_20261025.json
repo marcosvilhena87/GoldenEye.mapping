@@ -125,5 +125,15 @@
   "local_only_artifacts": [
     "output/csv/bond_soldier_v1_8_4_20261025T153459Z_9589_analysis.json",
     "output/csv/bond_soldier_v1_8_4_20261025T152121Z_173644_analysis.json"
-  ]
+  ],
+  "mission_part_context": {
+    "reference": "experiments/bond_soldier_mission_part_context_20261025.json",
+    "mission_number": 1,
+    "mission_name": "Arkangelsk",
+    "part": "I",
+    "part_name": "Dam",
+    "provenance": "operator_reported_with_screenshot",
+    "verified_by_memory_flag": false,
+    "scope": "experimental sessions listed in context record; cross-level transfer unvalidated"
+  }
 }
