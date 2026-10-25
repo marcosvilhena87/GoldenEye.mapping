@@ -1,0 +1,27 @@
+{
+  "id": "bond-soldier-relative-coordinate-v1-8-1",
+  "status": "implemented_awaiting_empirical_soldier_coordinates",
+  "date": "2026-10-25",
+  "hypothesis": "Immobilized soldier can serve as relative landmark for Bond displacement once independent positions are measured in shared world frame",
+  "freeze_control": {
+    "cheat": "Freeze All Enemies Alive",
+    "indicator_candidate": "0x02C90C",
+    "indicator_status": "previously_observed_not_canonical",
+    "physical_position_stability": "not_yet_confirmed"
+  },
+  "inputs": [
+    "GoldenEye.assistant/docs/FREEZE_ADDRESS_MAPPING_V1_1.md",
+    "GoldenEye.assistant/docs/ENEMY_COORDINATE_FULL_RAM_V1_8.md",
+    "GoldenEye.assistant/docs/BOND_COORDINATE_SYSTEM_VALIDATION_V1_6.md"
+  ],
+  "tool": "GoldenEye.assistant/tools/analyze_bond_soldier_relative_v1_8_1.py",
+  "template": "GoldenEye.assistant/docs/BOND_SOLDIER_RELATIVE_V1_8_1_TEMPLATE.json",
+  "protocol": "GoldenEye.assistant/docs/BOND_SOLDIER_RELATIVE_DISCOVERY_V1_8_1.md",
+  "known_bond_candidates": [
+    "0x0D33EC",
+    "0x0D33F4"
+  ],
+  "enemy_xyz_validated": false,
+  "independent_relative_vectors_available": 0,
+  "canonical_symbols_promoted": false
+}
